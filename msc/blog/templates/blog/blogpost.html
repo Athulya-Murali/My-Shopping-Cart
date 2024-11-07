@@ -1,0 +1,68 @@
+{% extends 'blog/basic.html' %}
+{% block body %}
+<div class="container">
+    <div class="row g-5 mt-4">
+        <div class="col-md-8">
+            <h2 class="pb-4 mb-4 fst-italic border-bottom">
+                {{post.title}}
+            </h2>
+            <p class="blog-post-meta">{{post.pub_date}} by <a href="#">Mark</a>
+            <div class="fb-like" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-layout="" data-action="" data-size="" data-share="true"></div>
+            </p>
+            <p>{{post.ctitle}}</p>
+            <h4 class="display-5 link-body-emphasis mb-1">{{post.head0}}</h4>
+            <p>{{post.chead0}}</p>
+            <h4>{{post.head1}}</h4>
+            <p>{{post.chead1}}</p>
+            <h4>{{post.head2}}</h4>
+            <p>{{post.chead2}}</p>
+            <div class="fb-comments" data-href="http://127.0.0.1:8000/blog/blogpost/{{post.post_id}}" data-width="" data-numposts="5"></div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="position-sticky" style="top: 2rem;">
+                <div class="p-4 mb-3 bg-body-tertiary rounded">
+                    <h4 class="fst-italic">About</h4>
+                    <p class="mb-0">Welcome to <strong><em>HandMart Blog.</em></strong>Your go-to destinatiom for
+                        exploring the latest trends,gaining insights and discovering stories that ignite
+                        inspiration.<br><em>HandMart</em> is not just an E-commerce platform;it's a community built
+                        around quality,authenticity, and passion for exceptional products. Our blog reflects our
+                        commitment to providing you with more than just products-we're here to inspire and empower.</p>
+                </div>
+
+                <div>
+                    <h4 class="fst-italic">Recent posts</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                               href="#">
+                                <svg class="bd-placeholder-img" width="100%" height="96"
+                                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                     preserveAspectRatio="xMidYMid slice" focusable="false">
+                                    <rect width="100%" height="100%" fill="#777"></rect>
+                                </svg>
+                                <div class="col-lg-8">
+                                    <h6 class="mb-0">Example blog post title</h6>
+                                    <small class="text-body-secondary">January 15, 2024</small>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+
+
+                <div class="p-4">
+                    <h4 class="fst-italic">Contact Us On:</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
